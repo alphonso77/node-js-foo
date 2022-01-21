@@ -24,10 +24,12 @@ steps:
 
 - task: CopyFiles@2
   inputs:
-    targetFolder: '$(Build.ArtifactStagingDirectory)'
+    contents: '*.tgz'
+    targetFolder: '$(Build.ArtifactStagingDirectory)/npm'
 
 - task: PublishBuildArtifacts@1
   inputs:
-      pathtoPublish: '$(build.artifactstagingdirectory)'
+      pathtoPublish: '$(build.ArtifactStagingDirectory)/npm'
+      artifactName: npm
   displayName: 'Publish Artifact: drop'
     
