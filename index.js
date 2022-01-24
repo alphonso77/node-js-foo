@@ -4,7 +4,7 @@ const port = 3000
 
 app.get('/', (req, res) => {
   const date = new Date('2022-01-24T10:34:00');
-  res.send(`Hello World! It\'s 5 o\'clock somewhere! Last updated: ${date.toLocaleTimeString()}`)
+  res.send(`Hello World! It\'s 5 o\'clock somewhere! Last updated: ${date.toLocaleDateString()}`)
 })
 app.get('/foo', (req, res) => {
     res.json({foo: 'bar', bar: 'baz'})
