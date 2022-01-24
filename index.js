@@ -3,7 +3,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  const date = new Date('2022-01-23T10:06:00');
+  const date = new Date('2022-01-24T10:34:00');
   res.send(`Hello World! It\'s 5 o\'clock somewhere! Last updated: ${date.toLocaleTimeString()}`)
 })
 app.get('/foo', (req, res) => {
